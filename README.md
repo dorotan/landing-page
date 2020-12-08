@@ -1,13 +1,9 @@
 # Landing Page Project
+The project is created with HTML, CSS and JavaScript - the purpose of this exercise was to convert the project from a static project to an interactive one. 
 
 ## Table of Contents
 
-* [Instructions](#instructions)
+The project consists of HTML file, CSS file and JavaScript file. The page consists of sections, once the new section appears, the new nav item is being added. When scrolling the page, the active class is being added to the section. The same happens when clicking on the nav item and being scrolled to the right section.
 
 ## Instructions
-
-The starter project has some HTML and CSS styling to display a static version of the Landing Page project. You'll need to convert this project from a static project to an interactive one. This will require modifying the HTML and CSS files, but primarily the JavaScript file.
-
-To get started, open `js/app.js` and start building out the app's functionality
-
-For specific, detailed instructions, look at the project instructions in the Udacity Classroom.
+To run this poject locally you can copy the path for index.html file and paste it in the browser.
