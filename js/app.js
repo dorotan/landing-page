@@ -11,12 +11,12 @@
  * 
  * JS Standard: ESlint
  * 
-*/
+ */
 
 /**
  * Define Global Variables
  * 
-*/
+ */
 const navBar = document.querySelector(".navbar__menu");
 const ulElement = document.querySelector("#navbar__list");
 const liElement = document.createElement("li");
@@ -27,18 +27,18 @@ let listFfElements = document.getElementsByTagName("section");
  * End Global Variables
  * Start Helper Functions
  * 
-*/
+ */
 
 /**
  * End Helper Functions
  * Begin Main Functions
  * 
-*/
+ */
 
 // build the nav
 const menuElements = function() {
     ulElement.innerHTML = "";
-    for(let i = 0; i < listFfElements.length; i++) {
+    for (let i = 0; i < listFfElements.length; i++) {
         liElement.innerHTML += `<a class="nav-items" href="#section${i + 1}">Section ${i + 1}</a>`;
         ulElement.appendChild(liElement);
         defaultActiveItems += 1;
@@ -57,9 +57,14 @@ const addActiveSection = function(e) {
 liElement.addEventListener("click", addActiveSection);
 
 window.addEventListener('scroll', () => {
-    const { scrollY } = window;
+    const {
+        scrollY
+    } = window;
     for (let i = 0; i < listFfElements.length; i++) {
-        const { offsetTop, offsetHeight } = listFfElements[i];
+        const {
+            offsetTop,
+            offsetHeight
+        } = listFfElements[i];
         if (scrollY >= offsetTop && scrollY < offsetTop + offsetHeight) {
             listFfElements[i].classList.add("your-active-class")
         } else {
@@ -72,7 +77,9 @@ window.addEventListener('scroll', () => {
 const scrollToSection = function(e) {
     e.preventDefault()
     const sectionEl = document.querySelector(e.target.hash);
-    sectionEl.scrollIntoView({behavior: 'smooth'})
+    sectionEl.scrollIntoView({
+        behavior: 'smooth'
+    })
 }
 
 liElement.addEventListener("click", scrollToSection);
@@ -83,12 +90,10 @@ menuElements();
  * End Main Functions
  * Begin Events
  * 
-*/
+ */
 
 // Build menu 
 
 // Scroll to section on link click
 
 // Set sections as active
-
-
