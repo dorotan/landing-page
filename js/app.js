@@ -56,6 +56,17 @@ const addActiveSection = function(e) {
 
 liElement.addEventListener("click", addActiveSection);
 
+window.addEventListener('scroll', () => {
+    const { scrollY } = window;
+    for (let i = 0; i < listFfElements.length; i++) {
+        const { offsetTop, offsetHeight } = listFfElements[i];
+        if (scrollY >= offsetTop && scrollY < offsetTop + offsetHeight) {
+            listFfElements[i].classList.add("your-active-class")
+        } else {
+            listFfElements[i].classList.remove("your-active-class")
+        }
+    }
+})
 
 // Scroll to anchor ID using scrollTO event
 const scrollToSection = function(e) {
